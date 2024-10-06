@@ -53,6 +53,38 @@
 // 1 <= word.length <= 20
 // word consists of English uppercase and lowercase letters, digits, '@', '#', and '$'.
 
-bool isValid(char* word) {
-    
+#include<stdio.h>
+#include<string.h>
+
+int main(){
+    char str[20];
+    char x;
+    char spchar[100]={'!','@','$','#','%','^','&','*','(',')','-','_','+','=','[',']','{','}','<','>','/','?','|'};
+    char vowel[100]={'a','e','i','o','u','E','I','O','U'};
+    printf("Enter your input: \n");
+    scanf("%s",str);
+    printf("\nYour input is: %s",str);
+    int j = strlen(str);
+    //printf("\nLength of the input is: ",j);
+    for(int i=0;i<=j;i++){
+        if(j>3 ){
+            printf("\nTrue!");
+            break;
+            
+        }
+        else if(str[i] == spchar[100]){
+            printf("\nFalse!");
+            break;
+        } 
+        else if(str[i]!=vowel[100]){
+            printf("\nFalse!");
+            break;
+        }
+        else {
+            printf("\nTrue!");
+        }
+
+    }  
+    return 0;
 }
+// if(str[]==('A'<=x>='Z')&&str[]==('a'<=x>='z'))
