@@ -16,7 +16,7 @@
 
 // Example 1:
 // Input: password = "a"
-// Output: 5
+// Output: 52
 
 // Example 2:
 // Input: password = "aA1"
