@@ -28,6 +28,40 @@
 // Explanation: 
 // There is no way to divide the players into teams such that the total skill of each team is equal.
 
+#include<stdio.h>
+#include<stdlib.h>
+
+int compare(const void* a, const void* b){
+    return(*(int*)a - *(int*)b);
+}
+
 long long dividePlayers(int* skill, int skillSize) {
+    qsort(skill, skillSize, sizeof(int), compare);
+    int teamSkill = skill[0] + skill[skillSize - 1];
+    long chem = skill[0]*skill[skillSize - 1];
+
+    for(int i = 1; i<skillSize/2 ; i++){
+        if(skill[i]+skill[skillSize - 1 - i] != teamSkill) return -1;
+        else{
+            chem = chem + (skill[i] * skill[skillSize - 1 - i]);
+        }
+    }
+    return chem;
+}
+
+int main(){
+    int skill[] = {3,2,5,1,3,4};
+    int skillSize = 6;
+    int result = dividePlayers(skill, skillSize);
+    printf("Test 1 : %d\n", result);
     
+    int skill2[] = {3,4};
+    int skillSize2 = 2;
+    int result2 = dividePlayers(skill2, skillSize2);
+    printf("Test 2 : %d\n", result2);
+    
+    int skill3[] = {1,1,2,3};
+    int skillSize3 = 4;
+    int result3 = dividePlayers(skill3, skillSize3);
+    printf("Test 3 : %d\n", result3);
 }
