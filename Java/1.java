@@ -29,7 +29,16 @@
 
 
 class Solution {
-    public boolean canBeIncreasing(int[] nums) {
-        
+    public static boolean canBeIncreasing(int[] nums) {
+        for(int i=1; i<nums.length; i++){
+            if(nums[i-1] < nums[i]){
+                return true;
+            }
+        }
+        return false;
+    }
+    public static void main(String[] args) {
+        int[] nums = {1,2,10,5,7};
+        System.out.println(canBeIncreasing(nums));
     }
 }
