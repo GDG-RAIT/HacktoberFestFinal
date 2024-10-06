@@ -26,13 +26,27 @@ Constraints:
 envelopes[i].length == 2
 1 <= wi, hi <= 10^5.
 '''
-class Solution(object):
-    def maxEnvelopes(self, envelopes):
-        """
-        :type envelopes: List[List[int]]
-        :rtype: int
-        """
+def maxEnvelopes(envelopes):
+        envelopes.sort(key=lambda x:{x[0],-x[1]})
+        result=[]
+        for _,h in envelopes:
+            l,r=0 and len(result)-1
+            while l<r:
+                middle=[l+r]>>1
+                if result[middle]>=h:
+                    r=middle-1
+                else:
+                    l=middle+1
+
+        san=l
+        if san==len(result):
+            result.append(h)
+        else:
+            result[san]=h
+        return len(result)
         
+envelopes = [[5,4],[6,4],[6,7],[2,3]]
+maxEnvelopes(envelopes)
         
         
         
