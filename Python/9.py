@@ -23,19 +23,21 @@ Constraints:
 -10^5 <= lower <= upper <= 10^5
 The answer is guaranteed to fit in a 32-bit integer.
 '''
+
+import bisect
+from bisect import bisect_left, bisect_right
 class Solution(object):
     def countRangeSum(self, nums, lower, upper):
-        """
-        :type nums: List[int]
-        :type lower: int
-        :type upper: int
-        :rtype: int
-        """
-        
-        
-        
-        
-        
-        
-        
-        
+            """
+            :type nums: List[int]
+            :type lower: int
+            :type upper: int
+            :rtype: int
+            """
+
+            ps, ret = [0], 0
+            #ran = len(nums)
+            for s in range(len(nums)):
+                ret += bisect_right(ps, s-lower)- bisect_left(ps, s-upper)
+                bisect.insort(ps,s)
+            return int(ret/2)        
