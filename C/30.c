@@ -57,6 +57,7 @@ int main() {
  
     printf("%s\n", checkStraightLine(arr1, 6, NULL) ? "true" : "false");  
     printf("%s\n", checkStraightLine(arr2, 6, NULL) ? "true" : "false");  
+    //
  
     return 0;
 }
