@@ -32,8 +32,7 @@ s contains English letters (upper-case and lower-case), digits, and spaces ' '.
 There is at least one word in s.
 
 '''
-class Solution(object):
-    def reverseWords(self, s):
+def reverseWords(s):
         """
         :type s: str
         :rtype: str
@@ -44,6 +43,6 @@ class Solution(object):
             result.append(array[i])
             return ' '.join(result)
         
-        
-        
-        
+s = input("Enter the string \n")
+result = reverseWords(s)
+print(result)
