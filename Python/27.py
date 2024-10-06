@@ -30,7 +30,7 @@ Constraints:
 nums.length == 3
 1 <= nums[i] <= 100
 '''
-def triangleType(self, nums):
+def triangleType(nums):
         """
         :type nums: List[int]
         :rtype: str
