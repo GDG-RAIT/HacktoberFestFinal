@@ -31,6 +31,20 @@
 // nums.length == 3
 // 1 <= nums[i] <= 100
 
-char* triangleType(int* nums, int numsSize) {
-    
+#include<stdio.h>
+
+int main(){
+    int a,b,c;
+    printf("Enter the sides: ");
+    scanf("%d %d %d",&a ,&b, &c);
+    if(a==b && b==c){
+        printf("equilateral");
+    }
+    else if((a+b>c)&&(b+c>a)&&(c+a>b)){
+        printf("scalene");
+    }
+    else{
+        printf("Cant be a triangle!");
+    }
+    return 0;
 }
