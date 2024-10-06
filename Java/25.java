@@ -54,7 +54,39 @@
 // word consists of English uppercase and lowercase letters, digits, '@', '#', and '$'.
 
 class Solution {
-    public boolean isValid(String word) {
-        
+    public static boolean  containsw(String word){
+        char[] c = {'$','@','#'};
+        for(int i=0; i<word.length(); i++){
+            if (word.charAt(i) == c[0]) {
+                return false;
+            }
+            if (word.charAt(i) == c[1]) {
+                return false;
+            }
+            if (word.charAt(i) == c[2]) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+
+
+    public static boolean isValid(String word) {
+        if(word.length() <=3 ){
+            return false;
+        }
+
+        for(int i=0; i<word.length(); i++){
+            if(containsw(word)){
+                return true;
+            }
+        }
+
+        return false;
+    }
+    public static void main(String[] args) {
+        String word = "a3$e";
+        System.out.println(isValid(word));
     }
 }
