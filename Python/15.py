@@ -32,8 +32,7 @@ Constraints:
 1 <= prices.length <= 3 * 10^4
 0 <= prices[i] <= 10^4
 '''
-class Solution(object):
-    def maxProfit(self, prices):
+def maxProfit(prices):
         """
         :type prices: List[int]
         :rtype: int
@@ -43,6 +42,14 @@ class Solution(object):
             if prices[days] > prices[days -1]:
                 profit += prices[days] - prices[days- 1]
         return profit
+
+n=int(input("enter range of list"))
+l=[]
+for i in range(n):
+    a=int(input("enter value"))
+    l.append(a)
+
+print(maxProfit(l))
         
         
         
