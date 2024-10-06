@@ -43,3 +43,11 @@ class Solution(object):
         :rtype: bool
         """
         
+        temp = 0
+        for i in range(len(nums)-1):
+            if nums[i]>nums[i+1] and nums[i+1]:
+                temp+=1
+            if i+2<len(nums) and nums[i-1]>=nums[i+2]:
+                if i+2<len(nums) and nums[i]>=nums[i+2]:
+                    return False
+        return temp<=1
