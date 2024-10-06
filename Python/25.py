@@ -58,18 +58,35 @@ class Solution(object):
         :type word: str
         :rtype: bool
         """
+        vowlow=['a', 'e', 'i', 'o', 'u']
+        vowup=['A', 'E', 'I', 'O', 'U']
+        i=0
+        self.w=word
+        if len(self.w) >= 3:
+            i+=1
+        if self.w.isdigit()==True or self.w.isupper()==True or self.w.islower()==True:
+            i+=1
+        for i in range (len(self.w)):
+            if self.w[i] in vowlow[0:4]:
+                 i+=1
+            elif self.w[i] in vowup[0:4]:
+                i+=1
+        
+        if i==3:
+            return True
+        else:
+            return False
+
+
+i=0      
+a=Solution()
+print(a.isValid("b3"))
         
         
         
         
         
-        
-        
-        
-        
-        
-        
-        
+
         
         
         
