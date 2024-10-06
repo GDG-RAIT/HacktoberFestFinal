@@ -24,12 +24,24 @@ name and typed consist of only lowercase English letters.
 '''
 class Solution(object):
     def isLongPressedName(self, name, typed):
-        """
-        :type name: str
-        :type typed: str
-        :rtype: bool
-        """
-        
+        self.name=name
+        self.typed=typed
+        i,j =0,0
+        while i < len(name) and j < len(typed):
+            if i < len(name) == j < len(typed):
+                i+=1
+                j+=1
+                return True
+            
+            elif len(name)> i == len( typed)> j-1:
+                j+=1
+                return True
+            
+            elif len(name)> i != len(typed)> j-1:
+               return False
+     
+a=Solution()
+print(a.isLongPressedName("saeed","ssaadd"))
         
         
         
