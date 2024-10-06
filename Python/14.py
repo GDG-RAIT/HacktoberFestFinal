@@ -29,6 +29,27 @@ class Solution(object):
         :type typed: str
         :rtype: bool
         """
+        n=list(name)
+        # print(n)
+        t=set(typed)
+        # print(t)
+        n=sorted(n)
+        t=sorted(list(t))
+        # print(n)
+        # print(t)
+        if(n==t):
+            return True
+        else:
+            return False
+
+
+s=Solution()
+e11='alex'
+e12='aaleex'
+e21='saeed'
+e22='ssaaedd'
+print(s.isLongPressedName(e11,e12))
+print(s.isLongPressedName(e21,e22))
         
         
         
