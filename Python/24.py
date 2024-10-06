@@ -29,7 +29,7 @@ envelopes[i].length == 2
 def maxEnvelopes(envelopes):
         envelopes.sort(key=lambda x:{x[0],-x[1]})
         result=[]
-        for _,h in envelopes:
+        for h in envelopes:
             l,r=0 and len(result)-1
             while l<r:
                 middle=[l+r]>>1
@@ -45,9 +45,17 @@ def maxEnvelopes(envelopes):
             result[san]=h
         return len(result)
         
-envelopes = [[5,4],[6,4],[6,7],[2,3]]
-maxEnvelopes(envelopes)
-        
+a=int(input("enter no of envelopes"))
+l=[]
+for i in range(a):
+    n=[]
+    for i in range(2):
+          b=int(input("enter no"))
+          n.append(b)
+    l.append(n)
+
+maxEnvelopes(l)
+    
         
         
         
