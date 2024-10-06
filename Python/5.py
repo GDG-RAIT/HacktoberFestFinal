@@ -49,9 +49,7 @@ class Solution(object):
                 w=""
         i=0
         n=len(word)-1
-        while i!=n//2:
-            word[i], word[n-i]=word[n-i], word[i]
-            i+=1
+        word=word[::-1]
         s=""
         for i in word:
             if i==word[n]:
@@ -68,7 +66,7 @@ obj=Solution ()
 print(obj.reverseWords(i1)) 
 print(obj.reverseWords(i2)) 
 print(obj.reverseWords(i3))         
-        
+                      
         
         
         
