@@ -7,7 +7,7 @@
 // It does not contain three repeating characters in a row (i.e., "Baaabb0" is weak, but "Baaba0" is strong).
 // Given a string password, return the minimum number of steps required to make password strong. if password is already strong, return 0.
 
-// In one step, you can:
+// In one step, you can:3333
 
 // Insert one character to password,
 // Delete one character from password, or
