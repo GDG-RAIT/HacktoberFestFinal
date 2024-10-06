@@ -30,13 +30,23 @@ Constraints:
 nums.length == 3
 1 <= nums[i] <= 100
 '''
-class Solution(object):
-    def triangleType(self, nums):
+def triangleType(self, nums):
         """
         :type nums: List[int]
         :rtype: str
         """
-        
+        if(nums[0]==nums[1]==nums[2]):
+            print("equilateral")
+        elif(nums[0]==nums[1] or nums[0]==nums[2] or nums[1]==nums[2]):
+            print("isosceles")
+        else:
+            print("scalene")
+
+l=[]
+for i in range(3):
+    a=int(input("enter side"))
+    l.append
+triangleType(l)
         
         
         
