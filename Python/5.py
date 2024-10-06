@@ -38,7 +38,11 @@ class Solution(object):
         :type s: str
         :rtype: str
         """
-        
+        array = s.split()
+        result = []
+        for i in range(len(array)-1, -1, -1):
+            result.append(array[i])
+            return ' '.join(result)
         
         
         
