@@ -54,10 +54,24 @@ word consists of English uppercase and lowercase letters, digits, '@', '#', and 
 '''
 class Solution(object):
     def isValid(self, word):
-        """
-        :type word: str
-        :rtype: bool
-        """
+        count=0
+        vowlow=['a', 'e', 'i', 'o', 'u']
+        vowup=['A', 'E', 'I', 'O', 'U']
+        self.word=word
+        for i in range (len(word)):
+            if(len(word)<3):
+                print("more than 3 words needed")
+            elif(word[i] in vowlow[0:5]== True):
+                if word[i] in vowup[0:5]== True:
+                    if word.isdigit()==True:
+                        if(word.islower()==True and word.isupper()==True):
+                            count=1
+            if(count==1) :
+                return True               
+            else:
+                return False
+a=Solution()   
+print(a.isValid("Red123"))     
         
         
         
