@@ -30,29 +30,19 @@ Constraints:
 nums.length == 3
 1 <= nums[i] <= 100
 '''
-class Solution(object):
-    def triangleType(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: str
-        """
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+def check(a):
+    a=list(a)
+    if(a[0]+a[1]>a[2] and a[1]+a[2]>a[0] and a[0]+a[2]>a[1]):
+        if(a[0]==a[1] and a[0]==a[2]):
+            print("It is an equivalateral triangle")
+        elif(a[0]==a[1] or a[0]==a[2] or a[1]==a[2]):
+            print("It is an isoceles triangle")
+        else:
+            print("It is an scalene triangle")
+    else:
+        print("It is not a triangle")
+b=int(input("enter first side"))
+c=int(input("enter second side"))
+d=int(input("enter third side"))
+a=[b,c,d]
+check(a)
