@@ -29,5 +29,53 @@
 
 bool canBeIncreasing(int* nums, int numsSize) {
     
+int temp[5] = {};
+    
+    
+    for(int i=0 ; i<numsSize ; i++){
+        temp[i] = nums[i];
+    }
+    
+    
+    for(int i = 0 ; i<numsSize ; i++){
+        
+        for(int k=0 ; k<numsSize ; k++)
+        {
+        if(i == k)
+        {
+            k++;
+        }
+        else
+        {
+        nums[k]= temp[k];
+            
+        }
+    }
+        
+        
+        // loop for checking ascending order
+    for(int j=0 ; j<numsSize-1; j++)
+    {
+        if(nums[j] > nums[j+1])
+        {
+                return false
+            }
+        }
+        
+        for(int l=0 ; l<numsSize ; l++){
+        nums[i] = temp[i];
+    }
+        
+        
+    }
+    
+    return true;
+    
+  
+    
+  
+    
 }
+
+
 
