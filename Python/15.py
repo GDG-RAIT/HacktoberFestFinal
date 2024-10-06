@@ -38,7 +38,11 @@ class Solution(object):
         :type prices: List[int]
         :rtype: int
         """
-        
+        profit = 0
+        for days in range(1, len(prices)):
+            if prices[days] > prices[days -1]:
+                profit += prices[days] - prices[days- 1]
+        return profit
         
         
         
