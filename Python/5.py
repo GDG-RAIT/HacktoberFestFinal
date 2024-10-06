@@ -34,12 +34,16 @@ There is at least one word in s.
 '''
 class Solution(object):
     def reverseWords(self, s):
-        """
-        :type s: str
-        :rtype: str
-        """
-        
-        
-        
-        
+        s = s 
+        rev_List = s[::-1]
+        return " ".join(rev_List)
+
+
+
+sol = Solution()
+sen = input().strip().split()
+if(len(sen) >= 1 and len(sen)<=104):
+    print(sol.reverseWords(sen))
+else:
+    print("Enter one string at least")
         
