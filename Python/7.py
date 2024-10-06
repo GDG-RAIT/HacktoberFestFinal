@@ -38,7 +38,27 @@ class Solution(object):
         :rtype: int
         """
         
+        total = sum(nums)
+        reminder = total%p
+
+        if reminder == 0:
+            return 0
         
+        prefix = {0,-1}
+        prefixS = 0
+        min = len(nums)
+
+        for i, nums in enumerate(nums):
+            prefixS += nums
+            curr = prefixS%p
+            target = (curr - reminder + p)%p
+
+            if target in prefix:
+                min = min(min, 1-prefix[target])
+
+            prefix[curr]=1
+
+        return min if min<len(nums) else -1
         
         
         
