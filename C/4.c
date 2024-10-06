@@ -22,6 +22,32 @@
  * };
  */
 
-struct ListNode* removeNthFromEnd(struct ListNode* head, int n) {
-    
+struct ListNode* removeNthFromEnd(struct ListNode* head, int n)
+ {
+     if (head == NULL || n == 0) {
+        return head;
+    }
+
+    struct ListNode* fast = head;
+    struct ListNode* slow = head;
+
+    for (int i = 0; i < n; i++) {
+        if (fast == NULL) {
+            return head; 
+        }
+        fast = fast->next;
+    }
+
+    while (fast->next != NULL) {
+        fast = fast->next;
+        slow = slow->next;
+    }
+
+    if (slow == head) {
+        return head->next; 
+    } else {
+        slow->next = slow->next->next; 
+    }
+
+    return head;
 }
