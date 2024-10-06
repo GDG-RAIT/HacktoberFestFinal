@@ -52,16 +52,28 @@ Constraints:
 1 <= word.length <= 20
 word consists of English uppercase and lowercase letters, digits, '@', '#', and '$'.
 '''
-class Solution(object):
-    def isValid(self, word):
-        """
-        :type word: str
-        :rtype: bool
-        """
-        
-        
-        
-        
+import re
+def words(a):
+    if (len(a)>3):
+        False
+    if re.search('a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,,S,T,U,V,W,X,Y,Z
+',a):
+        False
+    if not re.search('A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z
+',a):
+        False
+    if not re.search('1:9',a):
+        False
+    if not re.search('a,e,i,o,u',a):
+        False     
+    else:
+        True
+a=input("enter word")
+if(words(a)==True):
+    print(True)
+else:
+    print(False)
+
         
         
         
