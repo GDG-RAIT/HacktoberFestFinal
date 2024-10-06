@@ -34,7 +34,21 @@
 // 0 <= prices[i] <= 10^4
 
 class Solution {
-    public int maxProfit(int[] prices) {
+    public static int maxProfit(int[] prices) {
+        int answer = 0;
+        for(int i =0;i<prices.length-1;i++){
+            if(prices[i]<prices[i+1]){
+                answer +=(prices[i+1]-prices[i]);
+            }
+        }
+    return answer;
         
+        
+    }
+
+    public static void main(String[] args) {
+        int[] prices = {7,1,5,3,6,4};
+        int profit = maxProfit(prices);
+        System.out.println(profit);
     }
 }
