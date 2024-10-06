@@ -17,7 +17,7 @@ A consonant is an English letter that is not a vowel.
 
 Example 1:
 
-Input: word = "234Adas"
+Input: word ="34A2das"
 
 Output: true
 
@@ -52,28 +52,24 @@ Constraints:
 1 <= word.length <= 20
 word consists of English uppercase and lowercase letters, digits, '@', '#', and '$'.
 '''
-class Solution(object):
-    def isValid(self, word):
-        """
-        :type word: str
-        :rtype: bool
-        """
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+import re
+def passs(a):
+    if not(3<=len(a)<=20):
+        True
+    if not re.search("[a:b]",a):
+        True
+    if not re.search("[A:B]",a):
+        True
+    if not re.search("[1:9]",a):
+        True
+    if not re.search("[a,A,e,E,i,I,o,O,u,U]",a):
+        False       
+    if not re.search("[b,c,d,f,g,h,j,k,l,m,n,p,q,r,s,t,v,w,x,y,z]",a):
+        False
+    else:
+        False
+a=input("enter word")
+if(passs(a)):
+    print(False)
+else:
+    print(True)
