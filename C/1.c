@@ -26,8 +26,49 @@
 // Explanation: The result of removing any element is [1,1].
 // [1,1] is not strictly increasing, so return false.
  
-
-bool canBeIncreasing(int* nums, int numsSize) {
+#include <stdio.h>
+#include <conio.h>
+int nums[20];
+int i,j,temp=0;
+int enterArray(){
+    for(i=0;i<5;i++)
+    {
+        printf("Enter [%d] element", i+1);
+        scanf("%d",&nums[i]);
+    }
     
+    for(i=0;i<5;i++)
+    {
+        printf("%d\t",nums[i]);
+    }
 }
 
+
+int canBeIncreasing(int numsSize) {
+    //ascending order
+    for(i=0;i<numsSize;i++)
+    {
+        for(j=0;j<)
+            if(nums[i]>nums[i+1])
+            {
+                temp=nums[i];
+                nums[i]=nums[i+1];
+                nums[i+1]=temp;
+            }
+        
+    }
+    
+    for(i=0;i<5;i++)
+    {
+        printf("%d", nums[i]);
+    }
+}
+
+
+int main()
+{
+    printf("Hello World");
+    enterArray();
+    canBeIncreasing(3);
+    return 0;
+}
