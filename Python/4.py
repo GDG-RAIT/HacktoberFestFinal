@@ -30,14 +30,32 @@ The number of nodes in the list is sz.
 #     def __init__(self, val=0, next=None):
 #         self.val = val
 #         self.next = next
-class Solution(object):
-    def removeNthFromEnd(self, head, n):
+def removeN(head, n):
         """
         :type head: ListNode
         :type n: int
         :rtype: ListNode
         """
+        ary = list(0)
+        ary.next = head
+        first = ary
+        second = ary
+
+        for _ in range(n+1):
+            first = first.next
+
+        while first is not None:
+            first = first.next
+            second = second.next
+
+        second.next = second.next.next
+        return ary.next
         
-        
-        
+n=int(input("enter n"))
+a=int(input("enter length of head"))
+l=[]
+for i in range(a):
+     b=int(input("enter value"))
+     l.append(b)
+print(removeN(l))
         
