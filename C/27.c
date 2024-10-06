@@ -31,6 +31,26 @@
 // nums.length == 3
 // 1 <= nums[i] <= 100
 
-char* triangleType(int* nums, int numsSize) {
-    
+char* triangleType(int* nums, int numsSize) 
+{
+       if (numsSize != 3) 
+    {
+        return "none";
+    }
+
+
+
+    if (nums[0] == nums[1] && nums[1] == nums[2]) 
+    {
+        return "equilateral";
+    } 
+    else if (nums[0] == nums[1] || nums[0] == nums[2] || nums[1] == nums[2])
+     {
+        return "isosceles";
+    } 
+    else
+    {
+        return "scalene";
+    }
+
 }
