@@ -69,7 +69,7 @@ char* intToRoman(int num)
         while (num >= val[i])
         {
             num = num - val[i]; 
-            strcat(roman, symbols[i]); 
+            strcat(roman, symbols[i
         }
         i++;
     }
