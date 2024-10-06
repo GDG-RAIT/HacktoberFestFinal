@@ -35,6 +35,7 @@
 #include<stdio.h>
 
 int distMoney(int money, int children) {
+    
     int A[children], i, remain, count=0;
     for(i=0; i<children;i++){
         A[i]=1;
