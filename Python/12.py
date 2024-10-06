@@ -32,20 +32,26 @@ Constraints:
 1 <= money <= 200
 2 <= children <= 30
 '''
-class Solution(object):
-    def distMoney(self, money, children):
-        """
-        :type money: int
-        :type children: int
-        :rtype: int
-        """
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+def dis(a,b):
+    e=0
+    if(a%b==0):
+        c=int(a/b)
+        if(c>8):
+            while(c>8):
+                c=c-8
+                e=e+1
+            print(e-1)
+        elif(c==8):
+            e=b
+            print(e)
+    else:
+        c=a-b
+        while(c>8):
+            c=c-8
+            e=e+1
+            if(c==4):
+                e=e-1
+            print(e-1)
+a=int(input("enter the money"))
+b=int(input("enter the money"))
+dis(a,b)
