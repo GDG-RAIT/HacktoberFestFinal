@@ -29,7 +29,7 @@
 
 
 class Solution {
-    public boolean canBeIncreasing(int[] nums) {
+    public boolean canBeIncreasing(int[] nums) {dddddd
         
     }
 }
