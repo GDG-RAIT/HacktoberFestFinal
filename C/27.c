@@ -31,6 +31,87 @@
 // nums.length == 3
 // 1 <= nums[i] <= 100
 
-char* triangleType(int* nums, int numsSize) {
+#include <stdio.h>
+#include <stdbool.h>
+int nums[3],i,j;
+int temp, flag=3;
+
+
     
+char* triangleType( int numsSize) {
+
+for( i=1;i<=3;i++)
+{
+    printf("Enter [%d]th side", i);
+    scanf("%d", &nums[i-1]);
+}
+
+}
+int isTriangle()
+{
+
+        if(nums[0]+nums[1]>=nums[2])
+        {
+            flag=flag-1;
+
+        }
+        if(nums[1]+nums[2]>=nums[0])
+        {
+            flag=flag-1;
+
+
+        }
+        if(nums[0]+nums[2]>=nums[1])
+        {
+            flag=flag-1;
+
+
+        }
+
+        else
+        {
+            printf("Not a triangle");
+            flag=0;
+        }
+
+  return flag;
+}
+
+void main(){
+
+triangleType(3);
+
+   if(flag>0)
+   {
+         if((nums[0]==nums[1])&& (nums[1]==nums[2]))
+    {
+        printf("\nEquilateral");
+    }
+    else if(nums[0]==nums[1])
+    {
+        printf("\nIsoceles");
+    }
+    else if(nums[1]==nums[2])
+    {
+        printf("\nIsoceles");
+    }
+    else if(nums[2]==nums[0])
+    {
+        printf("\nIsoceles");
+    }
+    else if((nums[0]!=nums[1])&& (nums[1]!=nums[2])&& (nums[2]!=nums[0]))
+    {
+        printf("\nScalene");
+    }
+    else
+    {
+    printf("\nNone");
+
+ }
+   }
+
+else{
+printf("Not a triangle");
+
+}
 }
