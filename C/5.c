@@ -25,6 +25,36 @@
 // Explanation: You need to reduce multiple spaces between two words to a single space in the reversed string.
 
 char* reverseWords(char* s) {
-    
+    int st = 0;
+    while (s[st] == ' ') {
+        st++;
+    }
+
+    int ed = strlen(s) - 1;
+    while (ed >= 0 && s[ed] == ' ') {
+        ed--;
+    }
+
+    reverse(s + st, s + ed);
+
+    int i = st, j = st;
+    while (i <= ed) {
+        if (s[i] == ' ' || i == ed) {
+            reverse(s + j, s + (i == ed ? i : i - 1));
+            j = i + 1;
+        }
+        i++;
+    }
+
+    i = st, j = st;
+    while (i <= ed) {
+        if (s[i] != ' ' || (i > st && s[i - 1] != ' ')) {
+            s[j++] = s[i];
+        }
+        i++;
+    }
+    s[j] = '\0';
+
+    return s;
 }
 
