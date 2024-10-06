@@ -61,8 +61,8 @@ class Solution(object):
         for i in range (len(word)):
             if(len(word)<3):
                 print("more than 3 words needed")
-            elif(word[i] in vowlow[0:5]== True):
-                if word[i] in vowup[0:5]== True:
+            elif(word[i] in vowlow[0:4]== True):
+                if word[i] in vowup[0:4]== True:
                     if word.isdigit()==True:
                         if(word.islower()==True and word.isupper()==True):
                             count=1
